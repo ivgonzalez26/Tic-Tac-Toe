@@ -1,0 +1,12 @@
+<table class="tic-tac-toe-board">
+    @for (rowIndex of [0, 1, 2]; track rowIndex) {
+      <tr>
+        @for (colIndex of [0, 1, 2]; track colIndex) {
+          <td (click)="player_move(rowIndex, colIndex)">
+            <app-ficha [value]="tablero[rowIndex][colIndex]"></app-ficha>
+          </td>
+        }
+      </tr>
+    }
+  </table>
+  
